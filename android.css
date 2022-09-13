@@ -1,0 +1,325 @@
+@charset "UTF-8";
+/*Para importar fonte do Google Font*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/*
+Forma de dizer que todo h1 dentro da tag header vai receber os seguintes atributos.
+
+
+header> h1{
+
+}
+
+    */
+
+/*Declarando fonte externa*/
+@font-face {
+
+    font-family: 'Android';
+    src: url(idroid.otf) format('opentype');
+    font-weight: normal;
+}
+*{
+    margin: 0px;
+}
+/*Váriaveis Css para definir cores e fontes*/
+:root{
+   --cor0:rgb(77, 201, 77);
+   --cor1:rgb(16, 105, 16);
+   --cor3:rgb(4, 44, 4);
+
+   --font-padrao: Arial, Verdana, Helvetica, sans-serif;
+   --font-destaque:'Bebas Neue', cursive;
+   --font-android: 'Android', cursive;
+
+}
+
+
+
+
+/* Se eu quiser definir cores através de variáveis Utilizar assim::
+
+background-color: var(--cor0);
+(Comanto CRTL + Space para selecionar cor ou declarar como está a cima)
+
+   rgb(77, 201, 77);
+   rgb(16, 105, 16);
+   rgb(4, 44, 4);
+
+*/
+
+
+.cabecalho{
+
+    min-height: 150px;
+    max-height: 300px;
+    background-image: linear-gradient(to left, var(--cor0),var(--cor3) );
+    width: 100%;
+}
+.cabecalho>h1{
+    text-align: center;
+    text-shadow: 2px 2px 0px black;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-family: var(--font-destaque)
+    
+}
+.cabecalho>h3{
+    text-align: center;
+    
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+
+}
+
+.listamenu{
+    padding: 225px 0px 0px 0px;
+    list-style: none;
+    overflow: hidden;
+    color: white;
+    font-size: 17px;
+    font-family: var(--font-padrao);
+    font-weight: bold;
+    padding-top: 40px;
+    width: 100%;
+
+}
+
+.itemmenu{
+    padding-left: 31px;
+    padding-bottom: 5px;
+    text-align: center;
+    float: left;
+}
+.itemmenu a{
+   text-decoration: none;
+   color: white;
+   transition-duration: 0.3s;
+}
+
+.itemmenu a:hover{
+    background-color: var(--cor0);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.904);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 7px;
+    font-size: 20px;
+}
+
+.fundo{
+    width: 100%;
+    height: 100%;
+    background-color: lightgreen;
+}
+.conteudo{
+    padding: 20px;
+    margin: auto;
+    min-width: 300px;
+    max-width: 1005px;
+    margin-bottom: 30px;
+    border-bottom-left-radius: 10px ;
+    border-bottom-right-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.904);
+}
+
+/* Formatação de links 
+
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor3);
+    background-color: var(--cor0);
+    padding: 2px 6px;
+
+
+.conteudo a:hover
+    text-decoration: underline;
+    color: var(--cor1);
+    */
+
+.conteudo img{
+width: 100%;
+display: block;
+}
+
+img.pequena{
+max-width: 350px;
+margin: auto;
+display: block;
+}
+.historia{
+    text-align: center;
+    padding-top: 39px;
+    padding-left: 32px;
+    color: rgb(4, 65, 4);
+    margin: auto;
+    font-family: var(--font-android);
+    font-size: 20px;
+    padding-bottom: 30px;
+}
+.historia_texto{
+    text-indent: 30px;
+    line-height: 1.5em;
+    font-size: 20px;
+    margin: auto;
+    font-family: var(--font-padrao);
+    margin-bottom: 40px;
+    text-align: justify;
+    color: rgb(4, 65, 4);
+
+    
+}
+.subtitulo{
+    color: rgb(4, 65, 4);
+    background-image: linear-gradient(to right, var(--cor0), transparent);
+    margin: auto;
+    font-size: 20px;
+    font-family: var(--font-android);
+    width: 95%;
+    padding-left: 30px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    text-align: center;
+}
+.texto{
+    text-indent: 30px;
+    line-height: 1.5em;
+    font-family: var(--font-padrao);
+    font-size: 20px;
+    left: 5px;
+    text-align: justify;
+    color: rgb(4, 65, 4);
+}
+.texto a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor3);
+    background-color: var(--cor0);
+    padding: 2px 6px;
+
+}
+
+.texto a:hover{
+    text-decoration: underline;
+    color: var(--cor1);
+}
+
+.iframe{
+    background-color: var(--cor3);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 58%;
+    position: relative;
+}
+.iframe > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+
+}
+
+.aprender{
+    font-size: 30px;
+    color: white;
+    background-color: rgb(58, 231, 130);
+    width: 100%;
+    height: 50px;
+    margin: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.76);
+
+}
+.box{
+    width: 100%;
+    min-height: 360px;
+    margin: auto;
+    background-color:rgb(159, 240, 193) ;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: -5px;
+    padding-top: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.76);
+}
+.textobox{
+    text-indent: 30px;
+    line-height: 1.5em;
+    margin: auto;
+    color: rgb(0, 0, 0);
+    font-family: var(--font-padrao);
+    font-size: 20px;
+    padding: 10px 18px 0px 18px;
+    text-align: justify;
+
+}
+
+.textobox a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor3);
+    background-color: var(--cor0);
+    padding: 2px 6px;
+}
+
+.textobox a:hover{
+    text-decoration: underline;
+    color: var(--cor1);
+}
+/*
+.coluna1{
+    display: inline-block;
+    height: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+
+}
+*/
+.lista1{
+    list-style-type: '\2714\00A0\00A0\00A0';
+    color: black;
+    font-family: var(--font-padrao);
+    font-size: 15px;
+    font-weight: bold;
+    columns: 2;
+    padding-bottom: 20px;
+    text-indent: -10px;
+}   
+/* ----  Não vai precisar da lista 2 porque podemos dividir a lista em dua colunas, com o comando colunas e o número de colunas a ser colocado.
+.coluna2{
+    display: inline-block;
+    padding-left: 10px;
+    height: 100px;
+
+   
+}
+.lista2{
+    color: black;
+    list-style: none;
+    font-family: var(--font-padrao);
+    font-size: 15px;
+    font-weight: bold;
+
+}   
+*/
+.rodape{
+    padding: 15px;
+    background-color: rgb(3, 48, 3);
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-family: var(--font-padrao);
+
+}
+
+.rodape a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+
+}
